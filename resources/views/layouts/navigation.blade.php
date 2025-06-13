@@ -1,5 +1,5 @@
 <nav x-data="{ open: false, profileOpen: false }"
-    class="bg-[#1e97f3]  border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50 shadow-sm">
+    class="bg-[#e91e63] border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50 shadow-sm">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -7,13 +7,9 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" class="group flex items-center space-x-3">
-                        <div class="relative h-10 w-auto">
-                            <img src="{{ asset('storage/images/logo.png') }}" alt="Logo GacorNews"
-                                class="h-10 w-auto object-contain"
-                                onerror="this.onerror=null; this.src='{{ asset('fallback/logo-fallback.png') }}';">
-                        </div>
+                    
                         <span class="hidden md:block text-xl font-bold text-gray-900 dark:text-white">
-                            ZeroNews
+                            Hot News
                         </span>
                     </a>
                 </div>
@@ -23,7 +19,7 @@
                 <div class="hidden md:flex md:items-center md:space-x-1 md:ml-10">
                     <!-- <x-nav-link :href="route('dashboard')" 
                                 :active="request()->routeIs('dashboard')"
-                                class="relative px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all duration-200 hover:bg-blue-50 dark:hover:bg-blue-900/20">
+                                class="relative px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 rounded-lg transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-900/20">
                         <div class="flex items-center space-x-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
@@ -32,12 +28,12 @@
                             <span>{{ __('Dashboard') }}</span>
                         </div>
                         @if(request()->routeIs('dashboard'))
-                            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+                            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-pink-600 dark:bg-pink-400 rounded-full"></div>
                         @endif
                     </x-nav-link> -->
 
                     <x-nav-link :href="route('berita.index')" :active="request()->routeIs('berita.*')"
-                        class="relative px-4 py-2 text-sm font-medium  hover:text-blue-600 dark:hover:text-blue-200 rounded-lg transition-all duration-200 hover:bg-blue-50 dark:hover:bg-blue-900/20">
+                        class="relative px-4 py-2 text-sm font-medium  hover:text-pink-600 dark:hover:text-pink-200 rounded-lg transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-900/20">
                         <div class="flex items-center space-x-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,7 +44,7 @@
                         </div>
                         @if(request()->routeIs('berita.*'))
                             <div
-                                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full">
+                                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-pink-600 dark:bg-pink-400 rounded-full">
                             </div>
                         @endif
                     </x-nav-link>
@@ -56,7 +52,7 @@
                     <!-- Additional Navigation Items -->
                     <div class="relative group">
                         <button
-                            class="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all duration-200 hover:bg-blue-50 dark:hover:bg-blue-900/20">
+                            class="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 rounded-lg transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-900/20">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4">
@@ -75,7 +71,7 @@
                             class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
                             <div class="py-2">
                                 <a href="#"
-                                    class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400">
+                                    class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-600 dark:hover:text-pink-400">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
@@ -84,7 +80,7 @@
                                     <span>Pengguna</span>
                                 </a>
                                 <a href="#"
-                                    class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400">
+                                    class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-600 dark:hover:text-pink-400">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
@@ -106,7 +102,7 @@
                 <div class="hidden sm:flex sm:items-center sm:relative">
                     <div class="relative" x-data="{ open: false }">
                         <button @click="open = !open"
-                            class="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                            class="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900">
                             <div class="flex items-center space-x-2">
                                 <div
                                     class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black font-semibold text-sm">
@@ -142,7 +138,7 @@
                                 <!-- Menu Items -->
                                 <div class="py-2">
                                     <a href="{{ route('profile.edit') }}"
-                                        class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                                        class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-200">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z">
@@ -152,7 +148,7 @@
                                     </a>
 
                                     <a href="#"
-                                        class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                                        class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-pink-900/20 hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-200">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
@@ -187,7 +183,7 @@
                 <!-- Mobile Hamburger -->
                 <div class="flex items-center sm:hidden">
                     <button @click="open = !open"
-                        class="inline-flex items-center justify-center p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200">
+                        class="inline-flex items-center justify-center p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-200">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path :class="{'hidden': open, 'inline-flex': !open}" class="inline-flex"
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -235,7 +231,7 @@
             <div class="px-4 mb-3">
                 <div class="flex items-center space-x-3">
                     <div
-                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                        class="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-semibold">
                         {{ substr(Auth::user()->name, 0, 1) }}
                     </div>
                     <div>
